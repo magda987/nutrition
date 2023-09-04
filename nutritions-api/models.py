@@ -1,5 +1,5 @@
 from uuid import UUID, uuid4
-from enum import Enum, auto
+from enum import StrEnum, auto
 
 from sqlalchemy import ForeignKey
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
@@ -7,7 +7,7 @@ from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
 class Base(DeclarativeBase):
     pass
 
-class Solubility(Enum,str):
+class Solubility(StrEnum):
     WATER = auto()
     FAT = auto()
     
